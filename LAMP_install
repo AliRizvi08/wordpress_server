@@ -1,0 +1,8 @@
+#!/bin/bash
+
+dnf makecache
+dnf install mariadb mariadb-server httpd php-mysqlnd php-pecl-zip wget -y
+systemctl enable httpd
+systemctl enable mariadb
+systemctl start httpd
+systemctl start mariadb
